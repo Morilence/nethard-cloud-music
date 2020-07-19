@@ -1,4 +1,4 @@
-# netease-cloud-music
+# nethard-cloud-music
 
 ## Project setup
 
