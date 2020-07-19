@@ -26,10 +26,12 @@ export default {
     justify-content flex-start
     align-items flex-start
 
-    .label
-        padding 9px 10px
+    margin-bottom 7.9px
 
-        font-size 12px
+    .label
+        padding 9.8px 10px
+
+        font-size 11.8px
         color $placeholder_fontcolor
 
     .list

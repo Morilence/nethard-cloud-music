@@ -37,4 +37,5 @@ export default {
     min-height $app_min_height
 
     color $primary_fontcolor
+    font-family 'Microsoft YaHei', Arial, sans-serif
 </style>

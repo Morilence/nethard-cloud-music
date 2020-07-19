@@ -1,6 +1,6 @@
 <template>
     <li :class="['nav-item', active ? 'active' : '']">
-        <font-awesome-icon class="icon" v-if="faicon != false" :icon="faicon" />
+        <font-awesome-icon class="icon" v-if="faicon != false" :icon="faicon" pull="left" />
         <span class="title">{{ title }}</span>
     </li>
 </template>
@@ -32,11 +32,16 @@ export default {
     justify-content flex-start
     align-items center
 
-    padding 8.9px 15.5px
+    padding 8.8px 15.5px
     border-left 2px solid transparent
 
-    font-size 12px
+    font-size 11.8px
     color $regular_fontcolor
+
+    cursor pointer
+
+    &:hover
+        color $stress_fontcolor
 
     &.active
         border-left 2px solid $ornacolor
@@ -44,6 +49,7 @@ export default {
         color $stress_fontcolor
 
     .icon
-        font-size 14.5px
+        width 14.5px
+        height 14.5px
         margin-right 10.5px
 </style>
