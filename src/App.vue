@@ -1,19 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+    <vue-scroll>
+        <div id="app" class="fullscreen">
+            <header-top />
+            <content-frame />
+            <play-bar />
+        </div>
+    </vue-scroll>
 </template>
 
+<script>
+import HeaderTop from "./components/business/HeaderTop/index";
+import ContentFrame from "./components/business/ContentFrame/index";
+import PlayBar from "./components/business/PlayBar/index";
+export default {
+    name: "App",
+    components: {
+        HeaderTop,
+        ContentFrame,
+        PlayBar
+    }
+};
+</script>
+
 <style lang="stylus">
+@import "./style/styl/global.styl";
+
 #app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+    position relative
+
+    min-width $app_min_width
+    min-height $app_min_height
+
+    color $primary_fontcolor
 </style>

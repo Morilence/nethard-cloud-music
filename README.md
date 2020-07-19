@@ -1,29 +1,14 @@
 # netease-cloud-music
 
 ## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```shell
+npm i axios qs -S
+npm i vuescroll -S
 
-### Compiles and minifies for production
-```
-npm run build
-```
+npm i style-resources-loader -D
 
-### Run your tests
-```
-npm run test
-```
+npm i @fortawesome/vue-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons -S
 
-### Lints and fixes files
+npm i css-vars-ponyfill -S
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

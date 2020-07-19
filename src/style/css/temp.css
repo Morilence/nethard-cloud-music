@@ -1,0 +1,20 @@
+:root {
+    --forecolor: rgb(198, 47, 47);
+    --ornacolor: rgb(184, 37, 37);
+
+    --side-nav-bgcolor: rgb(245, 245, 247);
+    --side-nav-active-bgcolor: rgb(230, 231, 234);
+
+    --view-box-bgcolor: rgb(250, 250, 250);
+    
+    --play-bar-bgcolor: rgb(246, 246, 248);
+
+    --header-top-stress-fontcolor: rgb(255, 255, 255);
+    --header-top-primary-fontcolor: rgba(255, 255, 255, 0.8);
+
+    --stress-fontcolor: rgb(0, 0, 0);
+    --primary-fontcolor: rgb(51, 51, 51);
+    --regular-fontcolor: rgb(92, 92, 92);
+    --secondary-fontcolor: rgb(102, 102, 102);
+    --placeholder-fontcolor: rgb(125, 125, 125);
+}
