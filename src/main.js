@@ -14,7 +14,8 @@ import "./style/css/temp.css";
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-// import { faMusic as fasMusic, faBroadcastTower as fasBroadcastTower } from "@fortawesome/free-solid-svg-icons";
+// import { faUsdCircle as fasUsdCircle } from "@fortawesome/pro-solid-svg-icons";
+import { faRecordVinyl as fasRecordVinyl } from "@fortawesome/free-solid-svg-icons";
 import {
     faMusic as falMusic,
     faBroadcastTower as falBroadcastTower,
@@ -25,7 +26,16 @@ import {
     faDownload as falDownload
 } from "@fortawesome/pro-light-svg-icons";
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-library.add(falMusic, falBroadcastTower, falTvRetro, falVideo, falUserFriends, falCompactDisc, falDownload);
+library.add(
+    falMusic,
+    falBroadcastTower,
+    falTvRetro,
+    falVideo,
+    falUserFriends,
+    falCompactDisc,
+    falDownload,
+    fasRecordVinyl
+);
 
 // vue-scroll
 import vuescroll from "vuescroll";
