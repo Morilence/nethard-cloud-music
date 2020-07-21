@@ -28,6 +28,8 @@ export default {
 
     margin-bottom 7.9px
 
+    user-select none
+
     .label
         padding 9.7px 10px
 

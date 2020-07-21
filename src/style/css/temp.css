@@ -11,6 +11,7 @@
 
     --header-top-stress-fontcolor: rgba(255, 255, 255, 0.96);
     --header-top-primary-fontcolor: rgba(255, 255, 255, 0.75);
+    --header-top-secondary-fontcolor: rgb(255, 255, 255, 0.35);
     --header-top-placeholder-fontcolor: rgba(255, 255, 255, 0.2);
 
     --base-line-color: rgb(225, 225, 226);

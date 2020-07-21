@@ -3,6 +3,7 @@
         <div class="left ">
             <logo />
             <history-controller />
+            <search />
         </div>
         <div class="right"></div>
     </div>
@@ -11,11 +12,13 @@
 <script>
 import Logo from "./Logo/index";
 import HistoryController from "./HistoryController/index";
+import Search from "./Search/index";
 export default {
     name: "HeaderTop",
     components: {
         Logo,
-        HistoryController
+        HistoryController,
+        Search
     }
 };
 </script>

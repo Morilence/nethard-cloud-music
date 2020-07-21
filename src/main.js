@@ -28,7 +28,8 @@ import {
     faVideo as falVideo,
     faUserFriends as falUserFriends,
     faCompactDisc as falCompactDisc,
-    faDownload as falDownload
+    faDownload as falDownload,
+    faSearch as falSearch
 } from "@fortawesome/pro-light-svg-icons";
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 library.add(
@@ -39,6 +40,7 @@ library.add(
     falUserFriends,
     falCompactDisc,
     falDownload,
+    falSearch,
     fasRecordVinyl,
     fasChevronLeft,
     fasChevronRight

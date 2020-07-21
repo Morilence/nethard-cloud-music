@@ -1,5 +1,5 @@
 <template>
-    <li :class="['nav-item', active ? 'active' : '']">
+    <li :class="{ 'nav-item': true, 'active': active }">
         <font-awesome-icon class="icon" v-if="faicon != false" :icon="faicon" pull="left" />
         <span class="title">{{ title }}</span>
     </li>
@@ -39,6 +39,7 @@ export default {
     color $regular_fontcolor
 
     cursor pointer
+    user-select none
 
     &:hover
         color $stress_fontcolor
