@@ -1,14 +1,13 @@
-# nethard-cloud-music
+# Nethard Cloud Music
 
-## Project setup
+## Introduction
 
-```shell
-npm i axios qs -S
-npm i vuescroll -S
+网易云音乐PC端仿样开发 —— 网抑云音乐
 
-npm i style-resources-loader -D
+## Goal
 
-npm i @fortawesome/vue-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons -S
+基本实现网易云音乐PC端未登录状态下的全部功能
 
-npm i css-vars-ponyfill -S
-```
+## Preview (in development)
+
+<https://morilence.github.io/nethard-cloud-music/>
