@@ -9,8 +9,11 @@
     
     --play-bar-bgcolor: rgb(246, 246, 248);
 
-    --header-top-stress-fontcolor: rgb(255, 255, 255);
-    --header-top-primary-fontcolor: rgba(255, 255, 255, 0.8);
+    --header-top-stress-fontcolor: rgba(255, 255, 255, 0.96);
+    --header-top-primary-fontcolor: rgba(255, 255, 255, 0.75);
+    --header-top-placeholder-fontcolor: rgba(255, 255, 255, 0.2);
+
+    --base-line-color: rgb(225, 225, 226);
 
     --stress-fontcolor: rgb(0, 0, 0);
     --primary-fontcolor: rgb(51, 51, 51);

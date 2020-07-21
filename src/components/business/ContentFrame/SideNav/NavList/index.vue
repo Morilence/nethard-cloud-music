@@ -29,7 +29,7 @@ export default {
     margin-bottom 7.9px
 
     .label
-        padding 9.8px 10px
+        padding 9.7px 10px
 
         font-size 11.8px
         color $placeholder_fontcolor

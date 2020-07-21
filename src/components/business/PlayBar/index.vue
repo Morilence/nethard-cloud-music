@@ -8,9 +8,10 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 #play-bar
     width 100%
     height $play_bar_height
+    border-top 1px solid $base_line_color
     background-color $play_bar_bgcolor
 </style>

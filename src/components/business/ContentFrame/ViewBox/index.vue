@@ -8,7 +8,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 #view-box
     width 100%
     min-width $view_box_min_width

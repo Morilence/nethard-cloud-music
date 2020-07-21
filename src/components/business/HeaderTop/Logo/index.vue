@@ -1,7 +1,7 @@
 <template>
     <div id="logo">
         <font-awesome-icon class="icon" :icon="['fas', 'record-vinyl']" pull="left" />
-        <h1 class="headline">网难云音乐</h1>
+        <h1 class="headline">网抑云音乐</h1>
     </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     justify-content center
     align-items center
 
-    margin 0 14.5px
+    margin-left 14.6px
 
     color $header_top_stress_fontcolor
 
@@ -28,7 +28,7 @@ export default {
 
     .headline
         font-size 16.8px
-        font-family 'HanWangYenMediu221223bc8f2224a';
+        font-family 'HanWangYenMediu221476b13d2224a';
         font-weight 500
-        letter-spacing 1.3px
+        letter-spacing 1.2px
 </style>

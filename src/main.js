@@ -15,7 +15,12 @@ import "./style/css/temp.css";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 // import { faUsdCircle as fasUsdCircle } from "@fortawesome/pro-solid-svg-icons";
-import { faRecordVinyl as fasRecordVinyl } from "@fortawesome/free-solid-svg-icons";
+// import { faChevronLeft as farChevronLeft, faChevronRight as farChevronRight } from "@fortawesome/pro-regular-svg-icons";
+import {
+    faRecordVinyl as fasRecordVinyl,
+    faChevronLeft as fasChevronLeft,
+    faChevronRight as fasChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 import {
     faMusic as falMusic,
     faBroadcastTower as falBroadcastTower,
@@ -34,7 +39,9 @@ library.add(
     falUserFriends,
     falCompactDisc,
     falDownload,
-    fasRecordVinyl
+    fasRecordVinyl,
+    fasChevronLeft,
+    fasChevronRight
 );
 
 // vue-scroll

@@ -57,9 +57,10 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 #side-nav
     min-width $side_nav_min_width
     height 100%
+    border-right 1px solid $base_line_color
     background-color $side_nav_bgcolor
 </style>
