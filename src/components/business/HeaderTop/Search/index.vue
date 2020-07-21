@@ -48,12 +48,21 @@ export default {
     .icon
         position absolute
         top 47%
+        right 0
         transform translateY(-50%)
-        right 10px
+
+        box-sizing content-box
+        padding 3.8px 10px
+        border-radius 12px
 
         color rgba(255, 255, 255, 0.5)
         font-size 12.6px
         font-weight bold
+
+        cursor pointer
+
+        &:hover
+            color $header_top_stress_fontcolor
 
         &.active
             color $header_top_stress_fontcolor
