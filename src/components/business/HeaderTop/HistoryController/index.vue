@@ -22,7 +22,7 @@ export default {
     justify-content center
     align-items center
 
-    margin-left 62px
+    margin-left 62.5px
 
     button
         outline none

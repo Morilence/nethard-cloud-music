@@ -30,8 +30,8 @@ export default {
         margin-right 4.3px
 
     .headline
-        font-size 16.8px
-        font-family 'HanWangYenMediu221476b13d2224a';
+        font-size 16.5px
+        font-family 'YouYuan', 'Microsoft Yahei', Arial, sans-serif;
         font-weight 500
         letter-spacing 1.18px
 </style>

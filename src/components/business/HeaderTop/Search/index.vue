@@ -1,7 +1,7 @@
 <template>
     <div class="search">
         <label v-show="!(isFocused || keyword.length != 0)" class="placeholder">{{ placeholder }}</label>
-        <input type="text" v-model="keyword" @focus="isFocused = true" @blur="isFocused = false" />
+        <input type="text" v-model="keyword" @focus="isFocused = true" @blur="isFocused = false" maxlength="100" />
         <font-awesome-icon :class="{ icon: true, active: isFocused }" :icon="['fal', 'search']" />
     </div>
 </template>
@@ -61,7 +61,7 @@ export default {
     input
         outline none
 
-        padding 3px 15px 4.5px 8.8px
+        padding 3px 27.5px 4.5px 8.8px
         min-width 217px
         border none
         border-radius 12px
