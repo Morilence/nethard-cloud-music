@@ -10,4 +10,4 @@
 
 ## Preview (in development)
 
-<https://morilence.github.io/nethard-cloud-music/docs/>
+<https://morilence.github.io/nethard-cloud-music/>
