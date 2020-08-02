@@ -5,7 +5,11 @@
             <history-controller />
             <search />
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <login />
+            <hr />
+            <window-controller />
+        </div>
     </div>
 </template>
 
@@ -13,12 +17,16 @@
 import Logo from "./Logo/index";
 import HistoryController from "./HistoryController/index";
 import Search from "./Search/index";
+import Login from "./Login/index";
+import WindowController from "./WindowController/index";
 export default {
     name: "HeaderTop",
     components: {
         Logo,
         HistoryController,
-        Search
+        Search,
+        Login,
+        WindowController
     }
 };
 </script>
@@ -37,8 +45,20 @@ export default {
     color $header_top_primary_fontcolor
 
     .left
+    .right
         display flex
         flex-direction row
         justify-content flex-start
         align-items center
+
+    .right
+        padding 0 18.5px
+
+    hr
+        outline none
+        border none
+        width 1.1px
+        height 20px
+        margin 0 18.5px
+        background-color rgba(0, 0, 0, 0.15)
 </style>

@@ -16,10 +16,12 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 // import { faUsdCircle as fasUsdCircle } from "@fortawesome/pro-solid-svg-icons";
 // import { faChevronLeft as farChevronLeft, faChevronRight as farChevronRight } from "@fortawesome/pro-regular-svg-icons";
+// import { faWindowMinimize as farWindowMinimize } from "@fortawesome/free-regular-svg-icons";
 import {
     faRecordVinyl as fasRecordVinyl,
     faChevronLeft as fasChevronLeft,
-    faChevronRight as fasChevronRight
+    faChevronRight as fasChevronRight,
+    faSortDown as fasSortDown
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faMusic as falMusic,
@@ -29,7 +31,11 @@ import {
     faUserFriends as falUserFriends,
     faCompactDisc as falCompactDisc,
     faDownload as falDownload,
-    faSearch as falSearch
+    faSearch as falSearch,
+    faExternalLinkSquare as falExternalLinkSquare,
+    faMinus as falMinus,
+    faWindowMaximize as falWindowMaximize,
+    faTimes as falTimes
 } from "@fortawesome/pro-light-svg-icons";
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 library.add(
@@ -41,9 +47,14 @@ library.add(
     falCompactDisc,
     falDownload,
     falSearch,
+    falExternalLinkSquare,
+    falMinus,
+    falWindowMaximize,
+    falTimes,
     fasRecordVinyl,
     fasChevronLeft,
-    fasChevronRight
+    fasChevronRight,
+    fasSortDown
 );
 
 // vue-scroll

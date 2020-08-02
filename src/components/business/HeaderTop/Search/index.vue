@@ -52,7 +52,7 @@ export default {
         transform translateY(-50%)
 
         box-sizing content-box
-        padding 3.8px 10px
+        padding 3.8px 9px 3.8px 10px
         border-radius 12px
 
         color rgba(255, 255, 255, 0.5)
