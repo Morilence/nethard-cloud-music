@@ -35,7 +35,10 @@ import {
     faExternalLinkSquare as falExternalLinkSquare,
     faMinus as falMinus,
     faWindowMaximize as falWindowMaximize,
-    faTimes as falTimes
+    faTimes as falTimes,
+    faTshirt as falTshirt,
+    faEnvelope as falEnvelope,
+    faCog as falCog
 } from "@fortawesome/pro-light-svg-icons";
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 library.add(
@@ -51,6 +54,9 @@ library.add(
     falMinus,
     falWindowMaximize,
     falTimes,
+    falTshirt,
+    falEnvelope,
+    falCog,
     fasRecordVinyl,
     fasChevronLeft,
     fasChevronRight,

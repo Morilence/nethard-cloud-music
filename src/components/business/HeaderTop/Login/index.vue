@@ -52,7 +52,7 @@ export default {
             color $header_top_stress_fontcolor
 
         .uname
-            margin 0 9px 0 7px
+            margin 0 8.4px 0 7px
 
         .icon
             box-sizing content-box

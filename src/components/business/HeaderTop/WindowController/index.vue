@@ -26,7 +26,7 @@ export default {
         cursor pointer
 
         &:not(:first-child)
-            margin-left 12.6px
+            margin-left 12.4px
 
         &.mini
             box-sizing content-box

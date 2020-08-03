@@ -7,6 +7,10 @@
         </div>
         <div class="right">
             <login />
+            <vip />
+            <skin />
+            <letter />
+            <setup />
             <hr />
             <window-controller />
         </div>
@@ -18,6 +22,10 @@ import Logo from "./Logo/index";
 import HistoryController from "./HistoryController/index";
 import Search from "./Search/index";
 import Login from "./Login/index";
+import Vip from "./Vip/index";
+import Skin from "./Skin/index";
+import Letter from "./Letter/index";
+import Setup from "./Setup/index";
 import WindowController from "./WindowController/index";
 export default {
     name: "HeaderTop",
@@ -26,6 +34,10 @@ export default {
         HistoryController,
         Search,
         Login,
+        Vip,
+        Skin,
+        Letter,
+        Setup,
         WindowController
     }
 };
@@ -59,6 +71,6 @@ export default {
         border none
         width 1.1px
         height 20px
-        margin 0 18.5px
+        margin 0 18.5px 0 17.5px
         background-color rgba(0, 0, 0, 0.15)
 </style>
