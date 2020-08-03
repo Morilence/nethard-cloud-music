@@ -10,4 +10,4 @@
 
 ## Preview (in development)
 
-<https://morilence.github.io/nethard-cloud-music/>
+<a href="https://morilence.github.io/nethard-cloud-music" target="_blank">https://morilence.github.io/nethard-cloud-music</a>
