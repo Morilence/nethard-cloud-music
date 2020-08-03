@@ -3,13 +3,18 @@
         <font-awesome-icon class="icon mini" :icon="['fal', 'external-link-square']" title="mini模式" />
         <font-awesome-icon class="icon minimize" :icon="['fal', 'minus']" title="最小化" />
         <font-awesome-icon class="icon maximize" :icon="['fal', 'window-maximize']" title="最大化" />
-        <font-awesome-icon class="icon close" :icon="['fal', 'times']" title="关闭" />
+        <font-awesome-icon class="icon close" :icon="['fal', 'times']" title="关闭" @click="close()" />
     </div>
 </template>
 
 <script>
 export default {
-    name: "WindowController"
+    name: "WindowController",
+    methods: {
+        close() {
+            window.close();
+        }
+    }
 };
 </script>
 
