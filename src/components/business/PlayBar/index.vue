@@ -1,18 +1,18 @@
 <template>
     <div id="play-bar">
         <play-button-group />
-        <progress-bar />
+        <!-- <progress-bar /> -->
     </div>
 </template>
 
 <script>
 import PlayButtonGroup from "./PlayButtonGroup/index";
-import ProgressBar from "./ProgressBar/index";
+// import ProgressBar from "../../common/ProgressBar/index";
 export default {
     name: "PlayBar",
     components: {
-        PlayButtonGroup,
-        ProgressBar
+        PlayButtonGroup
+        // ProgressBar
     }
 };
 </script>
