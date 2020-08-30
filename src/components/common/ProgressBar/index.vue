@@ -1,12 +1,19 @@
 <template>
-    <div class="progress-bar wrap" :style="{ width: width + 'px', height: height + 'px' }">
-        <div class="inner" ref="inner" :style="{ height }" @mousedown="move($event)">
+    <div
+        ref="wrap"
+        :class="{ 'progress-bar': true, 'thumbhoveronly': thumbHoverOnly }"
+        :style="{ width: width + 'px', padding: `${(thumbDiam - height) / 2}px 0` }"
+        @mousedown="move($event)"
+    >
+        <div class="inner" :style="{ height: height + 'px' }">
             <div class="loaded" :style="{ width: loadedProgress + '%' }"></div>
             <div class="played" :style="{ width: playedProgress + '%' }">
                 <div
-                    class="thumb"
+                    ref="thumb"
+                    :class="{ thumb: true, shadowed: thumbHoverShadow }"
                     :style="{ width: thumbDiam + 'px', height: thumbDiam + 'px', right: -(thumbDiam / 2) + 'px' }"
-                    @click="slide($event)"
+                    @mousedown="enableThumb()"
+                    @mousemove="slide($event)"
                 >
                     <i class="dot" :style="{ width: dotDiam + 'px', height: dotDiam + 'px' }"></i>
                 </div>
@@ -25,36 +32,67 @@ export default {
         },
         height: {
             type: Number,
-            default: 5
+            default: 4.6
+        },
+        thumbHoverShadow: {
+            type: Boolean,
+            default: true
+        },
+        thumbHoverOnly: {
+            type: Boolean,
+            default: false
         }
     },
     data() {
         return {
             loadedProgress: 50,
-            playedProgress: 20
+            playedProgress: 20,
+            isThumbActivated: false
         };
     },
     computed: {
         thumbDiam: {
             get() {
-                return this.height + 6.6;
+                return this.height + 6.8;
             }
         },
         dotDiam: {
             get() {
-                return this.height - 1;
+                return this.height - 0.8;
             }
         }
     },
     methods: {
+        enableThumb() {
+            this.isThumbActivated = true;
+        },
+        disableThumb() {
+            this.isThumbActivated = false;
+        },
         move(evt) {
-            if (evt.target == this.$refs.inner) {
+            if (evt.target == this.$refs.wrap) {
                 this.playedProgress = (evt.offsetX / this.width) * 100;
             }
         },
         slide(evt) {
-            console.log("distance to the left:", evt.clientX - this.$refs.inner.getBoundingClientRect().left);
+            if (this.isThumbActivated) {
+                let distance = evt.clientX - this.$refs.wrap.getBoundingClientRect().left;
+                if (distance < 0) {
+                    distance = 0;
+                } else if (distance > this.width) {
+                    distance = this.width;
+                }
+                this.playedProgress = (distance / this.width) * 100;
+            }
         }
+    },
+    mounted() {
+        window.addEventListener("mouseup", this.$options.methods.disableThumb.bind(this));
+        window.addEventListener("mousemove", this.$options.methods.slide.bind(this));
+        this.$once("hook:beforeDestroy", () => {
+            window.removeEventListener("mouseup", this.$options.methods.disableThumb.bind(this));
+            window.removeEventListener("mousemove", this.$options.methods.slide.bind(this));
+        });
     }
 };
 </script>
@@ -72,6 +110,13 @@ export default {
 
     user-select none
 
+    &.thumbhoveronly
+        &:hover
+            .thumb
+                display block
+        .thumb
+            display none
+
     .inner
         display flex
         flex-direction row
@@ -81,13 +126,16 @@ export default {
         position relative
 
         width 100%
-        height 4.8px
+        border-radius 2px
         background-color rgba(0, 0, 8, 0.065)
+
+        pointer-events none
 
         .loaded
             width 0%
             height 100%
             background-color rgba(0, 0, 5, 0.155)
+            border-radius 2px
 
             pointer-events none
 
@@ -96,6 +144,7 @@ export default {
 
             width 0%
             height 100%
+            border-radius 2px
             background-color $second_forecolor
 
             pointer-events none
@@ -113,6 +162,9 @@ export default {
 
                 cursor pointer
                 pointer-events auto
+
+                &.shadowed:hover
+                    box-shadow 0 0 3px 2.8px rgba(0, 0, 0, 0.1)
 
                 .dot
                     position absolute
