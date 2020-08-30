@@ -15,7 +15,7 @@ export default {
     },
     data() {
         return {
-            width: 377,
+            width: 380,
             loaded: 0,
             played: 0
         };
@@ -28,9 +28,9 @@ export default {
             const appMinWidth = Number(getComputedStyle(document.getElementById("app")).minWidth.split("px")[0]);
             let appWidth = document.getElementById("app").getBoundingClientRect().width;
             if (appWidth > appMinWidth) {
-                this.width = 377 + (appWidth - appMinWidth);
+                this.width = 380 + (appWidth - appMinWidth);
             } else {
-                this.width = 377;
+                this.width = 380;
             }
         }
     },
@@ -60,13 +60,13 @@ export default {
     justify-content flex-start
     align-items center
 
-    margin-left 29.6px
+    margin-left 29.8px
 
     user-select none
 
     .time
         font-size 12px
-        letter-spacing 1px
+        letter-spacing 0.5px
 
         transform scale(0.875, 0.96)
         cursor default

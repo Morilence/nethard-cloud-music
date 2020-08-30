@@ -177,6 +177,11 @@ export default {
             pointer-events none
 
             .thumb
+                display flex
+                flex-direction row
+                justify-content center
+                align-items center
+
                 position absolute
                 top 50%
                 transform translateY(-50%)
@@ -194,11 +199,6 @@ export default {
                     box-shadow 0 0 3px 2.8px rgba(0, 0, 0, 0.1)
 
                 .dot
-                    position absolute
-                    top 50%
-                    left 50%
-                    transform translate(-50%, -50%)
-
                     border none
                     border-radius 100%
                     background-color $second_forecolor

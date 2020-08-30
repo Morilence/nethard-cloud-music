@@ -30,7 +30,7 @@ export default {
 
     width 100%
     height $play_bar_height
-    padding-left 29.8px
+    padding-left 29.6px
     border-top 1px solid $base_line_color
     background-color $play_bar_bgcolor
 
