@@ -62,6 +62,8 @@ export default {
 
     margin-left 29.6px
 
+    user-select none
+
     .time
         font-size 12px
         letter-spacing 1px
