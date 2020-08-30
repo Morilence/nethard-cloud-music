@@ -56,7 +56,7 @@ export default {
             background-color $forecolor
 
         &:not(:first-child)
-            margin-left 23.4px
+            margin-left 23.8px
 
         &.play, &.pause
             width 34.5px

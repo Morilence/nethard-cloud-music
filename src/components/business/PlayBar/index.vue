@@ -1,19 +1,23 @@
 <template>
     <div id="play-bar">
-        <play-button-group />
-        <!-- <progress-bar /> -->
+        <div class="left">
+            <play-button-group />
+            <play-progress />
+        </div>
+        <div class="right"></div>
     </div>
 </template>
 
 <script>
 import PlayButtonGroup from "./PlayButtonGroup/index";
-// import ProgressBar from "../../common/ProgressBar/index";
+import PlayProgress from "./PlayProgress/index";
 export default {
     name: "PlayBar",
     components: {
-        PlayButtonGroup
-        // ProgressBar
-    }
+        PlayButtonGroup,
+        PlayProgress
+    },
+    methods: {}
 };
 </script>
 
@@ -21,7 +25,7 @@ export default {
 #play-bar
     display flex
     flex-direction row
-    justify-content flex-start
+    justify-content space-between
     align-items center
 
     width 100%
@@ -29,4 +33,11 @@ export default {
     padding-left 29.8px
     border-top 1px solid $base_line_color
     background-color $play_bar_bgcolor
+
+    .left
+    .right
+        display flex
+        flex-direction row
+        justify-content flex-start
+        align-items center
 </style>

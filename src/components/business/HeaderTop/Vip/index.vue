@@ -12,7 +12,7 @@ export default {
 
 <style lang="stylus" scoped>
 #vip
-    margin-left 13px
+    margin-left 12.5px
 
     font-size 11.6px
 

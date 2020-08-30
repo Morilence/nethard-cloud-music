@@ -19,7 +19,7 @@ export default {
 
     box-sizing content-box
     padding-bottom 1px
-    margin-left 25.85px
+    margin-left 25.9px
 
     color rgba(255, 255, 255, 0.72)
     font-size 15.6px

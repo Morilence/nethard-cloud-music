@@ -41,39 +41,68 @@ export default {
         thumbHoverOnly: {
             type: Boolean,
             default: false
+        },
+        loaded: {
+            type: Number,
+            default: 0
+        },
+        played: {
+            type: Number,
+            default: 0
         }
     },
     data() {
         return {
-            loadedProgress: 50,
-            playedProgress: 20,
+            loadedProgress: this.loaded,
+            playedProgress: this.played,
             isThumbActivated: false
         };
     },
     computed: {
         thumbDiam: {
             get() {
-                return this.height + 6.8;
+                return this.height + 7.3;
             }
         },
         dotDiam: {
             get() {
-                return this.height - 0.8;
+                return this.height - 0.6;
             }
+        }
+    },
+    watch: {
+        loaded(newVal) {
+            this.loadedProgress = newVal;
+        },
+        played(newVal) {
+            this.playedProgress = newVal;
         }
     },
     methods: {
         enableThumb() {
-            this.isThumbActivated = true;
+            if (!this.isThumbActivated) {
+                this.isThumbActivated = true;
+            }
         },
         disableThumb() {
-            this.isThumbActivated = false;
+            if (this.isThumbActivated) {
+                this.isThumbActivated = false;
+                // change事件表示人为改动当前进度
+                this.$emit("change", this.playedProgress);
+            }
         },
+        /**
+         * 点击跳至某位置
+         */
         move(evt) {
             if (evt.target == this.$refs.wrap) {
                 this.playedProgress = (evt.offsetX / this.width) * 100;
+                this.$emit("change", this.playedProgress);
             }
         },
+        /**
+         * 滑动至某位置
+         */
         slide(evt) {
             if (this.isThumbActivated) {
                 let distance = evt.clientX - this.$refs.wrap.getBoundingClientRect().left;
@@ -105,8 +134,6 @@ export default {
     align-items center
 
     position relative
-
-    margin-left 10px
 
     user-select none
 
