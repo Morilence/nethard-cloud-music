@@ -1,7 +1,7 @@
 <template>
     <div id="skin">
-        <font-awesome-icon class="icon" :icon="['fal', 'tshirt']" />
-        <popover-frame class="dropdown"></popover-frame>
+        <font-awesome-icon class="icon" :icon="['fal', 'tshirt']" @click="isDropped ? retract() : drop()" />
+        <popover-frame ref="dropdown" v-show="isDropped" class="dropdown"></popover-frame>
     </div>
 </template>
 
@@ -11,6 +11,39 @@ export default {
     name: "Skin",
     components: {
         PopoverFrame
+    },
+    data() {
+        return {
+            isDropped: false
+        };
+    },
+    methods: {
+        /**
+         * 展开
+         */
+        drop() {
+            this.isDropped = true;
+        },
+        /**
+         * 收回
+         */
+        retract() {
+            this.isDropped = false;
+        }
+    },
+    mounted() {
+        /**
+         * 失焦收回
+         */
+        let blur = evt => {
+            if (evt.path.indexOf(this.$el) == -1) {
+                this.$options.methods.retract.bind(this)();
+            }
+        };
+        window.addEventListener("click", blur);
+        this.$once("hook:beforeDestroy", () => {
+            window.removeEventListener("click", blur);
+        });
     }
 };
 </script>

@@ -1,12 +1,18 @@
 <template>
-    <div class="popover-frame">
+    <div :class="{ 'popover-frame': true, 'caretwith': caret }">
         <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "PopoverFrame"
+    name: "PopoverFrame",
+    props: {
+        caret: {
+            type: Boolean,
+            default: true
+        }
+    }
 };
 </script>
 
@@ -16,11 +22,11 @@ export default {
 
     background-color $view_box_bgcolor
     border-radius 4px
-    box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.12)
+    box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.15)
 
     cursor default
 
-    &::before
+    &.caretwith::before
         content ""
         position absolute
         top -6.8px
@@ -32,5 +38,5 @@ export default {
         border-width: 7.8px;
         border-color: $view_box_bgcolor $view_box_bgcolor transparent transparent;
         transform: rotate(-45deg) translate(-5.51px, -5.51px);
-        box-shadow 2px -2px 6px -2px rgba(0, 0, 0, 0.12)
+        box-shadow 2px -2px 6px -2px rgba(0, 0, 0, 0.15)
 </style>
