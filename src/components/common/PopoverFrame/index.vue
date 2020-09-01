@@ -1,6 +1,9 @@
 <template>
     <div class="popover-frame">
-        <slot></slot>
+        <div class="arrow"></div>
+        <div class="content">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -11,7 +14,11 @@ export default {
 </script>
 
 <style lang="stylus">
-.popover-frame {
-    box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.1)
-}
+.popover-frame
+    display flex
+    flex-direction column
+    justify-content flex-start
+    align-items center
+
+    box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.12)
 </style>

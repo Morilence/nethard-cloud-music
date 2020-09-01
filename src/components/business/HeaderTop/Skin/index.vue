@@ -1,12 +1,17 @@
 <template>
     <div id="skin">
         <font-awesome-icon class="icon" :icon="['fal', 'tshirt']" />
+        <popover-frame class="dropdown"></popover-frame>
     </div>
 </template>
 
 <script>
+import PopoverFrame from "../../../common/PopoverFrame/index";
 export default {
-    name: "Skin"
+    name: "Skin",
+    components: {
+        PopoverFrame
+    }
 };
 </script>
 
@@ -16,6 +21,8 @@ export default {
     flex-direction row
     justify-content center
     align-items center
+
+    position relative
 
     box-sizing content-box
     padding-bottom 1px
@@ -30,4 +37,14 @@ export default {
     .icon
         &:hover
             color $header_top_stress_fontcolor
+
+    .dropdown
+        position absolute
+        top $header_top_height
+        left 0
+
+        width 200px
+        height 500px
+        border-radius 4px
+        background-color $view_box_bgcolor
 </style>
