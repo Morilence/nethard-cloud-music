@@ -40,11 +40,8 @@ export default {
 
     .dropdown
         position absolute
-        top $header_top_height
-        left 0
+        top $header_top_height - 25.5px
 
-        width 200px
-        height 500px
-        border-radius 4px
-        background-color $view_box_bgcolor
+        width 319px
+        height 251px
 </style>
