@@ -41,8 +41,19 @@ export default {
             }
         };
         window.addEventListener("click", blur);
+        /**
+         * 适应布局
+         */
+        let resize = () => {
+            this.$refs.dropdown.$el.style.height =
+                document.getElementById("app").getBoundingClientRect().height - 92 + "px";
+        };
+        resize();
+        window.addEventListener("resize", resize);
+
         this.$once("hook:beforeDestroy", () => {
             window.removeEventListener("click", blur);
+            window.removeEventListener("resize", resize);
         });
     }
 };
@@ -76,5 +87,4 @@ export default {
         top $header_top_height - 25px
 
         width 365px
-        height 3850%
 </style>
