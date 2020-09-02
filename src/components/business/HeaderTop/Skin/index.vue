@@ -1,16 +1,20 @@
 <template>
     <div id="skin">
         <font-awesome-icon class="icon" :icon="['fal', 'tshirt']" @click="isDropped ? retract() : drop()" />
-        <popover-frame ref="dropdown" v-show="isDropped" class="dropdown"></popover-frame>
+        <popover-frame ref="dropdown" v-show="isDropped" class="dropdown">
+            <skin-peeler />
+        </popover-frame>
     </div>
 </template>
 
 <script>
 import PopoverFrame from "../../../common/PopoverFrame/index";
+import SkinPeeler from "./SkinPeeler/index";
 export default {
     name: "Skin",
     components: {
-        PopoverFrame
+        PopoverFrame,
+        SkinPeeler
     },
     data() {
         return {
@@ -77,4 +81,6 @@ export default {
 
         width 319px
         height 251px
+
+        padding 14.4px 15px
 </style>
