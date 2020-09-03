@@ -80,7 +80,7 @@ export default {
         top $header_top_height - 25.5px
 
         width 319px
-        height 251px
+        // height 251px
 
-        padding 14.4px 15px
+        padding 14.4px 13px
 </style>

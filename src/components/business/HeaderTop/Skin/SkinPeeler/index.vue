@@ -5,8 +5,8 @@
             <li :class="['type', 'purecolor', optIndex == 1 ? 'active' : '']" @click="choose(1)">纯色</li>
         </ul>
         <div class="container">
-            <purecolor-selector v-if="optIndex == 0" />
-            <theme-selector v-else />
+            <theme-selector v-if="optIndex == 0" />
+            <purecolor-selector v-else />
         </div>
     </div>
 </template>
@@ -57,6 +57,7 @@ export default {
 
         position relative
 
+        padding 0 1px
         width 100%
 
         &::after
@@ -68,12 +69,12 @@ export default {
             bottom 0
 
             width 100%
-            height 1.2px
+            height 1.4px
             background-color rgb(225, 225, 225)
 
         .type
             padding-bottom 2.6px
-            border-bottom 2px solid transparent
+            border-bottom 1.8px solid transparent
 
             position relative
 
@@ -90,7 +91,7 @@ export default {
                 color $primary_fontcolor
             &.active
                 color $primary_fontcolor
-                border-bottom 2px solid rgb(136, 136, 136)
+                border-bottom 1.8px solid rgb(136, 136, 136)
 
     .container
         display flex
@@ -98,7 +99,7 @@ export default {
         justify-content center
         align-items center
 
-        margin-top 15px
+        margin-top 10.6px
         width 100%
         height 100%
 </style>
