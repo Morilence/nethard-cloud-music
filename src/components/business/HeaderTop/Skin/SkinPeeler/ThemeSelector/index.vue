@@ -67,7 +67,7 @@ $guanfanghong_color = rgb(205, 56, 53)
 
         .background
             width calc(100% - 2px)
-            height calc(100% - 2px)
+            height calc(100% - 1px)
 
         &.kuxuanhei
             .background
