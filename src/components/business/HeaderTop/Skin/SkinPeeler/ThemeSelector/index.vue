@@ -66,8 +66,8 @@ $guanfanghong_color = rgb(205, 56, 53)
             border-color $guanfanghong_color
 
         .background
-            width 99%
-            height 99%
+            width 98%
+            height 98%
 
         &.kuxuanhei
             .background
