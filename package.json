@@ -16,7 +16,7 @@
     "@fortawesome/pro-regular-svg-icons": "^5.1.0-8",
     "@fortawesome/pro-solid-svg-icons": "^5.1.0-5",
     "@fortawesome/vue-fontawesome": "^0.1.10",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "css-vars-ponyfill": "^2.3.2",
     "normalize.css": "^8.0.1",
